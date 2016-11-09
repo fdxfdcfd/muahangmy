@@ -15,7 +15,7 @@ var HomeComponent = (function () {
         this._elRef = _elRef;
     }
     HomeComponent.prototype.ngOnInit = function () {
-        $(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });
+        jQuery(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });
     };
     HomeComponent = __decorate([
         core_1.Component({

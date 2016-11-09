@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ElementRef } from '@angular/core';
+import { ViewChild, ElementRef, AfterViewInit} from '@angular/core';
+declare var jQuery:any;
 
 @Component({
     moduleId: module.id,
@@ -10,6 +11,6 @@ export class HomeComponent implements OnInit {
     constructor(private _elRef: ElementRef) { }
 
     ngOnInit() { 
-        $(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });	
+        jQuery(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });	
     }
 }

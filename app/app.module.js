@@ -15,6 +15,7 @@ var app_component_1 = require('./app.component');
 var app_routing_module_1 = require('./app-routing.module');
 //pages
 var home_component_1 = require('./pages/home.component/home.component');
+var product_detail_component_1 = require('./pages/product_detail.component/product_detail.component');
 //widgets
 var wid_header_component_1 = require('./widgets/wid_header.component/wid_header.component');
 var wid_footer_component_1 = require('./widgets/wid_footer.component/wid_footer.component');
@@ -39,7 +40,8 @@ var AppModule = (function () {
                 wid_footer_component_1.WidFooterComponent,
                 mod_header_top_component_1.ModHeaderTopComponent,
                 mod_menu_component_1.ModMenuComponent,
-                mod_header_slide_component_1.ModHeaderSlideComponent
+                mod_header_slide_component_1.ModHeaderSlideComponent,
+                product_detail_component_1.ProductDetailComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

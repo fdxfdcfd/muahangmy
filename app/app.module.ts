@@ -7,6 +7,7 @@ import { AppRoutingModule }     from './app-routing.module';
 
 //pages
 import { HomeComponent } from './pages/home.component/home.component';
+import { ProductDetailComponent } from './pages/product_detail.component/product_detail.component';
 //widgets
 import { WidHeaderComponent } from './widgets/wid_header.component/wid_header.component';
 import { WidFooterComponent } from './widgets/wid_footer.component/wid_footer.component';
@@ -29,7 +30,8 @@ import { ModHeaderSlideComponent } from './modules/mod_header_slide.component/mo
     WidFooterComponent,
     ModHeaderTopComponent,
     ModMenuComponent,
-    ModHeaderSlideComponent
+    ModHeaderSlideComponent,
+    ProductDetailComponent
     ],
   bootstrap:    [ AppComponent ]
 })

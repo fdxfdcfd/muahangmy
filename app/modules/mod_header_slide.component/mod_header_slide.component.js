@@ -9,14 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var core_2 = require('@angular/core');
 var ModHeaderSlideComponent = (function () {
     function ModHeaderSlideComponent() {
+        this.state = 'inactive';
     }
-    ModHeaderSlideComponent.prototype.ngOnInit = function () { };
+    ModHeaderSlideComponent.prototype.toggleState = function () {
+        console.log(this.state);
+        if (this.state == 'inactive') {
+            this.state = 'active';
+        }
+        else {
+            this.state = 'inactive';
+        }
+    };
+    ModHeaderSlideComponent.prototype.ngOnInit = function () {
+    };
     ModHeaderSlideComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'mod_header_slide',
+            animations: [
+                core_2.trigger('slideState', [
+                    core_2.state('inactive', core_2.style({
+                        "opacity": 1,
+                        transform: 'translate(0)'
+                    })),
+                    core_2.state('active', core_2.style({
+                        "opacity": 0,
+                        transform: 'translate(-100%)'
+                    })),
+                    core_2.transition('inactive => active', core_2.animate('1000ms ease-in')),
+                    core_2.transition('active => inactive', core_2.animate('1000ms ease-out'))
+                ])
+            ],
             templateUrl: 'mod_header_slide.component.html'
         }), 
         __metadata('design:paramtypes', [])

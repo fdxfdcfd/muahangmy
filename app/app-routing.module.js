@@ -12,8 +12,10 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var home_component_1 = require('./pages/home.component/home.component');
 var product_detail_component_1 = require('./pages/product_detail.component/product_detail.component');
+// import { NotFoundComponent } from './pages/notfound.component/notfound.component';
+// import { Four04Component } from './pages/404.component/404.component';
 var routes = [
-    { path: '', redirectTo: '/trang-chu', pathMatch: 'full' },
+    { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
     { path: 'trang-chu', component: home_component_1.HomeComponent },
     { path: 'san-pham', component: product_detail_component_1.ProductDetailComponent },
 ];

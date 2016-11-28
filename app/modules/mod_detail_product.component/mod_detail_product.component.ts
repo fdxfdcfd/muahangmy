@@ -17,12 +17,13 @@ export class ModDetailProductComponent implements OnInit {
     product: Product;
     constructor(private route: ActivatedRoute,
                 private router: Router, 
-                private service_product: ProductService) { }
+                private service_product: ProductService) {
+                    this.getprouductdetail();
+                 }
 
     getprouductdetail(){
          this.route.params.forEach((params: Params) => {
             let id = +params['id'];
-            let pr:Product
             this.service_product.getProductById(id).subscribe(
                 data => this.product = data.shift(), // put the data returned from the server in our variable
                 error => console.log("Lỗi xảy ra ở HTTP service"), // in case of failure show this message
@@ -31,7 +32,7 @@ export class ModDetailProductComponent implements OnInit {
         });
     }
     ngOnInit() {
-        this.getprouductdetail();
+        console.log(123);
         console.log(this.product);
     }
 

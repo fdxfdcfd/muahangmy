@@ -19,12 +19,12 @@ var ModDetailProductComponent = (function () {
         this.route = route;
         this.router = router;
         this.service_product = service_product;
+        this.getprouductdetail();
     }
     ModDetailProductComponent.prototype.getprouductdetail = function () {
         var _this = this;
         this.route.params.forEach(function (params) {
             var id = +params['id'];
-            var pr;
             _this.service_product.getProductById(id).subscribe(function (data) { return _this.product = data.shift(); }, // put the data returned from the server in our variable
             function (// put the data returned from the server in our variable
                 error) { return console.log("Lỗi xảy ra ở HTTP service"); }, // in case of failure show this message
@@ -33,7 +33,7 @@ var ModDetailProductComponent = (function () {
         });
     };
     ModDetailProductComponent.prototype.ngOnInit = function () {
-        this.getprouductdetail();
+        console.log(123);
         console.log(this.product);
     };
     ModDetailProductComponent = __decorate([

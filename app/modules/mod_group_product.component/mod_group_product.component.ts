@@ -13,6 +13,7 @@ import 'rxjs/Rx';
     templateUrl: 'mod_group_product.component.html'
 })
 export class ModGroupProductComponent implements OnInit {
+    @Input product_type:number;
     errorMessage: string;
     products: Product[];
     constructor(private service_product: ProductService, private router: Router) { }
@@ -32,6 +33,7 @@ export class ModGroupProductComponent implements OnInit {
     }
     ngOnInit() {
         this.getProductByNew();
+        console.log(this.product_type);
     }
      gotoDetail(product: Product): void {
         let link = ['/san-pham', product.id];

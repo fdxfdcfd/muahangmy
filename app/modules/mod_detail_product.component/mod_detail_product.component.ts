@@ -32,8 +32,6 @@ export class ModDetailProductComponent implements OnInit {
         });
     }
     ngOnInit() {
-        console.log(123);
-        console.log(this.product);
     }
 
 }

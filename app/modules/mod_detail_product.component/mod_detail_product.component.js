@@ -33,8 +33,6 @@ var ModDetailProductComponent = (function () {
         });
     };
     ModDetailProductComponent.prototype.ngOnInit = function () {
-        console.log(123);
-        console.log(this.product);
     };
     ModDetailProductComponent = __decorate([
         core_1.Component({

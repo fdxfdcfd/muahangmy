@@ -10,25 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var service_product_1 = require('../../services/service_product/service_product');
+var router_1 = require('@angular/router');
 require('rxjs/add/operator/map');
 require('rxjs/Rx');
 var ModGroupProductComponent = (function () {
-    function ModGroupProductComponent(service_product) {
+    function ModGroupProductComponent(service_product, router) {
         this.service_product = service_product;
+        this.router = router;
     }
     ModGroupProductComponent.prototype.getProduct = function () {
         var _this = this;
         this.service_product.getListProduct()
-            .subscribe(function (data) { return _this.products = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); }, function () { return console.log(_this.products); });
+            .subscribe(function (data) { return _this.products = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); });
     };
     ModGroupProductComponent.prototype.getProductByNew = function () {
         var _this = this;
         this.service_product.getProductbyNew(1)
-            .subscribe(function (data) { return _this.products = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); }, function () { return console.log(_this.products); });
+            .subscribe(function (data) { return _this.products = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); });
     };
     ModGroupProductComponent.prototype.ngOnInit = function () {
         this.getProductByNew();
-        console.log(123);
+    };
+    ModGroupProductComponent.prototype.gotoDetail = function (product) {
+        var link = ['/san-pham', product.id];
+        this.router.navigate(link);
     };
     ModGroupProductComponent = __decorate([
         core_1.Component({
@@ -36,7 +41,7 @@ var ModGroupProductComponent = (function () {
             selector: 'mod_group_product',
             templateUrl: 'mod_group_product.component.html'
         }), 
-        __metadata('design:paramtypes', [service_product_1.ProductService])
+        __metadata('design:paramtypes', [service_product_1.ProductService, router_1.Router])
     ], ModGroupProductComponent);
     return ModGroupProductComponent;
 }());

@@ -7,9 +7,10 @@ import { ProductDetailComponent } from './pages/product_detail.component/product
 // import { Four04Component } from './pages/404.component/404.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
+  
   { path: 'trang-chu',  component: HomeComponent },
-  { path: 'san-pham',  component: ProductDetailComponent },
+  { path: 'san-pham/:id',  component: ProductDetailComponent },
+  { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
   // {path: '404', component: Four04Component},
   // {path: '**', redirectTo: '404'}
 ];

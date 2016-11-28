@@ -16,7 +16,6 @@ export class ProductService {
     constructor(private http: Http) { }
 
     getListProduct(){
-        console.log(this.http.get(this.url_api).map(res => res.json()));
         return this.http.get(this.url_api).map(res => res.json());
     }
   private handleError(error: any): Promise<any> {
@@ -33,7 +32,6 @@ export class ProductService {
     {
         let body = JSON.stringify({ "newProduct": 1 });
         let option = new RequestOptions({ method: "post" });
-        console.log(this.http.post(this.url_api, body, option).map(res => res.json()));
         return this.http.post(this.url_api, body, option).map(res => res.json());
     }
     getProductbyNew(newstt){

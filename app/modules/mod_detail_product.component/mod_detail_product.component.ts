@@ -1,12 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Product } from '../../models/product/product';
+import { ProductService } from '../../services/service_product/service_product';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
+
+import 'rxjs/add/operator/map';
+import 'rxjs/Rx';
 
 @Component({
     moduleId: module.id,
     selector: 'mod_detail_product',
+    providers: [ProductService],
     templateUrl: 'mod_detail_product.component.html'
 })
 export class ModDetailProductComponent implements OnInit {
-    constructor() { }
+    product: Product;
+    constructor(private route: ActivatedRoute,
+                private router: Router, 
+                private service_product: ProductService) { }
 
-    ngOnInit() { }
+    getprouductdetail(){
+         this.route.params.forEach((params: Params) => {
+            let id = +params['id'];
+            let pr:Product
+            this.service_product.getProductById(id).subscribe(
+                data => this.product = data.shift(), // put the data returned from the server in our variable
+                error => console.log("Lỗi xảy ra ở HTTP service"), // in case of failure show this message
+                () => console.log(this.product)//run this code in all cases
+            );
+        });
+    }
+    ngOnInit() {
+        this.getprouductdetail();
+        console.log(this.product);
+    }
+
 }

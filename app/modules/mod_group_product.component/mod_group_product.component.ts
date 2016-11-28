@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/product/product';
 import { ProductService } from '../../services/service_product/service_product';
 
-import { Router } from '@angular/router';
+import { Router} from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
+
 
 @Component({
     moduleId: module.id,
@@ -14,26 +15,27 @@ import 'rxjs/Rx';
 export class ModGroupProductComponent implements OnInit {
     errorMessage: string;
     products: Product[];
-    constructor(private service_product: ProductService) { }
+    constructor(private service_product: ProductService, private router: Router) { }
     getProduct() {
         this.service_product.getListProduct()
             .subscribe(
-            data => this.products = data, 
-            error => console.log("Lỗi xảy ra ở HTTP service"), 
-            () => console.log(this.products)
+            data => this.products = data,
+            error => console.log("Lỗi xảy ra ở HTTP service")
             );
     }
-    getProductByNew(){
-         this.service_product.getProductbyNew(1)
+    getProductByNew() {
+        this.service_product.getProductbyNew(1)
             .subscribe(
-            data => this.products = data, 
-            error => console.log("Lỗi xảy ra ở HTTP service"), 
-            () => console.log(this.products)
+            data => this.products = data,
+            error => console.log("Lỗi xảy ra ở HTTP service")
             );
     }
     ngOnInit() {
         this.getProductByNew();
-        console.log(123);
+    }
+     gotoDetail(product: Product): void {
+        let link = ['/san-pham', product.id];
+        this.router.navigate(link);
     }
 
 }

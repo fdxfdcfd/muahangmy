@@ -1,6 +1,6 @@
 <div class="section group">
     <div class="grid_1_of_4 images_1_of_4" *ngFor="let product of products">
-        <a routerLink="/san-pham/{{product.id}}"><img alt="" src="{{product.img}}"></a>
+        <a  (click)="gotoDetail(product)"><img alt="" src="{{product.img}}"></a>
         <h2>{{product.name}} </h2>
         <div class="price-details">
             <div class="price-number">

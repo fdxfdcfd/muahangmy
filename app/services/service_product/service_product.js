@@ -22,7 +22,6 @@ var ProductService = (function () {
         this.url_api = "/muahangmy/app/service_api/api_product.php";
     }
     ProductService.prototype.getListProduct = function () {
-        console.log(this.http.get(this.url_api).map(function (res) { return res.json(); }));
         return this.http.get(this.url_api).map(function (res) { return res.json(); });
     };
     ProductService.prototype.handleError = function (error) {
@@ -37,7 +36,6 @@ var ProductService = (function () {
     ProductService.prototype.getNewProduct = function () {
         var body = JSON.stringify({ "newProduct": 1 });
         var option = new http_2.RequestOptions({ method: "post" });
-        console.log(this.http.post(this.url_api, body, option).map(function (res) { return res.json(); }));
         return this.http.post(this.url_api, body, option).map(function (res) { return res.json(); });
     };
     ProductService.prototype.getProductbyNew = function (newstt) {

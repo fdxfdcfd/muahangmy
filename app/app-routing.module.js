@@ -15,9 +15,9 @@ var product_detail_component_1 = require('./pages/product_detail.component/produ
 // import { NotFoundComponent } from './pages/notfound.component/notfound.component';
 // import { Four04Component } from './pages/404.component/404.component';
 var routes = [
-    { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
     { path: 'trang-chu', component: home_component_1.HomeComponent },
-    { path: 'san-pham', component: product_detail_component_1.ProductDetailComponent },
+    { path: 'san-pham/:id', component: product_detail_component_1.ProductDetailComponent },
+    { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

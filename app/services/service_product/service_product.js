@@ -24,22 +24,13 @@ var ProductService = (function () {
     ProductService.prototype.getListProduct = function () {
         return this.http.get(this.url_api).map(function (res) { return res.json(); });
     };
-    ProductService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
-    };
     ProductService.prototype.getProductById = function (id) {
         var body = JSON.stringify({ "id": id });
         var option = new http_2.RequestOptions({ method: "post" });
         return this.http.post(this.url_api, body, option).map(function (res) { return res.json(); });
     };
-    ProductService.prototype.getNewProduct = function () {
-        var body = JSON.stringify({ "newProduct": 1 });
-        var option = new http_2.RequestOptions({ method: "post" });
-        return this.http.post(this.url_api, body, option).map(function (res) { return res.json(); });
-    };
-    ProductService.prototype.getProductbyNew = function (newstt) {
-        var body = JSON.stringify({ "new": newstt });
+    ProductService.prototype.getProductByProductType = function (product_type) {
+        var body = JSON.stringify({ "product_type": product_type });
         var option = new http_2.RequestOptions({ method: "post" });
         return this.http.post(this.url_api, body, option).map(function (res) { return res.json(); });
     };

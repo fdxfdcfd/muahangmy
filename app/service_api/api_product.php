@@ -15,10 +15,10 @@ if($input->product_cate_id)
 	$db->setQuery($lenh_sql);
 	$data = $db->loadAllRow();
 }
-else if($input->newstt){
-	$lenh_sql = "SELECT p.*
-        FROM product p
-        WHERE p.new = $input->newstt";
+else if($input->product_type){
+	$lenh_sql = "SELECT *
+        FROM product
+        WHERE product_type = $input->product_type";
 	
 	$db->setQuery($lenh_sql);
 	$data = $db->loadAllRow();

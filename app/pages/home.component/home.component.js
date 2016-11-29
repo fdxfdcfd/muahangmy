@@ -21,7 +21,7 @@ var HomeComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'home',
-            templateUrl: 'home.component.html'
+            templateUrl: 'home.component.html',
         }), 
         __metadata('design:paramtypes', [core_2.ElementRef])
     ], HomeComponent);

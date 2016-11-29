@@ -17,34 +17,33 @@ var ModGroupProductComponent = (function () {
     function ModGroupProductComponent(service_product, router) {
         this.service_product = service_product;
         this.router = router;
+        this.product_type = 2;
     }
     ModGroupProductComponent.prototype.getProduct = function () {
         var _this = this;
         this.service_product.getListProduct()
             .subscribe(function (data) { return _this.products = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); });
     };
-    ModGroupProductComponent.prototype.getProductByNew = function () {
+    ModGroupProductComponent.prototype.getProductByProductType = function (product_type) {
         var _this = this;
-        this.service_product.getProductbyNew(1)
+        this.service_product.getProductByProductType(product_type)
             .subscribe(function (data) { return _this.products = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); });
     };
     ModGroupProductComponent.prototype.ngOnInit = function () {
-        this.getProductByNew();
+        this.getProductByProductType(this.product_type);
+        console.log(this.products);
         console.log(this.product_type);
     };
     ModGroupProductComponent.prototype.gotoDetail = function (product) {
         var link = ['/san-pham', product.id];
         this.router.navigate(link);
     };
-    __decorate([
-        Input, 
-        __metadata('design:type', Number)
-    ], ModGroupProductComponent.prototype, "product_type", void 0);
     ModGroupProductComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'mod_group_product',
-            templateUrl: 'mod_group_product.component.html'
+            templateUrl: 'mod_group_product.component.html',
+            inputs: ['product_type']
         }), 
         __metadata('design:paramtypes', [service_product_1.ProductService, router_1.Router])
     ], ModGroupProductComponent);

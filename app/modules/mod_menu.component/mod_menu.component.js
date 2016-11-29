@@ -9,17 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var service_menu_1 = require('../../services/service_menu/service_menu');
+require('rxjs/add/operator/map');
+require('rxjs/Rx');
 var ModMenuComponent = (function () {
-    function ModMenuComponent() {
+    function ModMenuComponent(menu_service) {
+        this.menu_service = menu_service;
     }
-    ModMenuComponent.prototype.ngOnInit = function () { };
+    ModMenuComponent.prototype.getListMenu = function () {
+        var _this = this;
+        this.menu_service.getListMenu()
+            .subscribe(function (data) { return _this.menus = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); }, function () { return console.log(_this.menus); });
+    };
+    ModMenuComponent.prototype.ngOnInit = function () {
+        this.getListMenu();
+    };
+    ModMenuComponent.prototype.goToPage = function (menu) {
+        var link = ['/san-pham', product.id];
+        this.router.navigate(link);
+    };
     ModMenuComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'mod_menu',
             templateUrl: 'mod_menu.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [service_menu_1.MenuService])
     ], ModMenuComponent);
     return ModMenuComponent;
 }());

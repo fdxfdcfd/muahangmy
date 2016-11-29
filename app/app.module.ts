@@ -34,6 +34,7 @@ import { ModGroupProductComponent } from './modules/mod_group_product.component/
 import { ModDetailProductComponent } from './modules/mod_detail_product.component/mod_detail_product.component';
 //services
 import { ProductService } from './services/service_product/service_product';
+import { MenuService } from './services/service_menu/service_menu';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ProductService } from './services/service_product/service_product';
     // Four04Component
     ],
     providers: [
-      ProductService
+      ProductService,
+      MenuService
       ],
   bootstrap:    [ AppComponent ]
 })

@@ -33,6 +33,7 @@ var mod_group_product_component_1 = require('./modules/mod_group_product.compone
 var mod_detail_product_component_1 = require('./modules/mod_detail_product.component/mod_detail_product.component');
 //services
 var service_product_1 = require('./services/service_product/service_product');
+var service_menu_1 = require('./services/service_menu/service_menu');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -59,7 +60,8 @@ var AppModule = (function () {
                 mod_detail_product_component_1.ModDetailProductComponent
             ],
             providers: [
-                service_product_1.ProductService
+                service_product_1.ProductService,
+                service_menu_1.MenuService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

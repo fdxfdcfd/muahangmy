@@ -34,8 +34,6 @@ export class ModGroupProductComponent implements OnInit {
     }
     ngOnInit() {
         this.getProductByProductType(this.product_type);
-        console.log(this.products);
-        console.log(this.product_type);
     }
      gotoDetail(product: Product): void {
         let link = ['/san-pham', product.id];

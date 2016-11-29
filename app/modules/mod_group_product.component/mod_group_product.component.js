@@ -31,8 +31,6 @@ var ModGroupProductComponent = (function () {
     };
     ModGroupProductComponent.prototype.ngOnInit = function () {
         this.getProductByProductType(this.product_type);
-        console.log(this.products);
-        console.log(this.product_type);
     };
     ModGroupProductComponent.prototype.gotoDetail = function (product) {
         var link = ['/san-pham', product.id];

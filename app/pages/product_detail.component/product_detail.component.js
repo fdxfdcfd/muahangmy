@@ -9,10 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent() {
+    function ProductDetailComponent(router) {
+        this.router = router;
     }
     ProductDetailComponent.prototype.ngOnInit = function () {
+        this.router.events.subscribe(function (evt) {
+            if (!(evt instanceof router_1.NavigationEnd)) {
+                return;
+            }
+            document.body.scrollTop = 0;
+        });
         jQuery(function () {
             jQuery('#products').slides({
                 preload: true,
@@ -33,7 +41,7 @@ var ProductDetailComponent = (function () {
             //providers: [ProductService],
             templateUrl: 'product_detail.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], ProductDetailComponent);
     return ProductDetailComponent;
 }());

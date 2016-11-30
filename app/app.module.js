@@ -19,8 +19,7 @@ var app_component_1 = require('./app.component');
 //pages
 var home_component_1 = require('./pages/home.component/home.component');
 var product_detail_component_1 = require('./pages/product_detail.component/product_detail.component');
-// import { NotFoundComponent } from './pages/notfound.component/notfound.component';
-// import { Four04Component } from './pages/404.component/404.component';
+var page_not_found_component_1 = require('./pages/page_not_found.component/page_not_found.component');
 //widgets
 var wid_header_component_1 = require('./widgets/wid_header.component/wid_header.component');
 var wid_footer_component_1 = require('./widgets/wid_footer.component/wid_footer.component');
@@ -60,7 +59,8 @@ var AppModule = (function () {
                 mod_content_top_component_1.ModContentTopComponent,
                 mod_group_product_component_1.ModGroupProductComponent,
                 mod_detail_product_component_1.ModDetailProductComponent,
-                mod_category_product_component_1.ModCategoryProductComponent
+                mod_category_product_component_1.ModCategoryProductComponent,
+                page_not_found_component_1.PageNotFoundComponent
             ],
             providers: [
                 service_product_1.ProductService,

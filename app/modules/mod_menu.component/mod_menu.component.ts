@@ -20,8 +20,7 @@ export class ModMenuComponent implements OnInit {
         this.menu_service.getListMenu()
             .subscribe(
             data => this.menus = data,
-            error => console.log("Lỗi xảy ra ở HTTP service"),
-            ()=> console.log(this.menus)
+            error => console.log("Lỗi xảy ra ở HTTP service")
             );
     }
     ngOnInit() {

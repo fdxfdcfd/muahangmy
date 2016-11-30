@@ -19,7 +19,7 @@ var ModCategoryProductComponent = (function () {
     ModCategoryProductComponent.prototype.getCategoryList = function () {
         var _this = this;
         this.service_category.getCategoryList()
-            .subscribe(function (data) { return _this.categories = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); }, function () { return console.log(_this.categories); });
+            .subscribe(function (data) { return _this.categories = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); });
     };
     ModCategoryProductComponent.prototype.ngOnInit = function () {
         this.getCategoryList();

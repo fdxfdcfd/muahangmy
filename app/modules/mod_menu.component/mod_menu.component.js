@@ -19,7 +19,7 @@ var ModMenuComponent = (function () {
     ModMenuComponent.prototype.getListMenu = function () {
         var _this = this;
         this.menu_service.getListMenu()
-            .subscribe(function (data) { return _this.menus = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); }, function () { return console.log(_this.menus); });
+            .subscribe(function (data) { return _this.menus = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); });
     };
     ModMenuComponent.prototype.ngOnInit = function () {
         this.getListMenu();

@@ -19,8 +19,7 @@ export class ModCategoryProductComponent implements OnInit {
         this.service_category.getCategoryList()
             .subscribe(
             data => this.categories = data,
-            error => console.log("Lỗi xảy ra ở HTTP service"),
-            () => console.log(this.categories)
+            error => console.log("Lỗi xảy ra ở HTTP service")
             );
     }
     ngOnInit() { 

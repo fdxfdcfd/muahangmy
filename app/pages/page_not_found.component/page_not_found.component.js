@@ -9,29 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_product_type_1 = require('../../models/product_type/mock_product_type');
-var ModContentTopComponent = (function () {
-    function ModContentTopComponent() {
-        this.product_type = 1;
+var PageNotFoundComponent = (function () {
+    function PageNotFoundComponent() {
     }
-    ModContentTopComponent.prototype.ngOnInit = function () {
-        this.product_types = mock_product_type_1.PRODUCTTYPE;
-        for (var item in this.product_types) {
-            if (this.product_types[item].product_type_id == this.product_type) {
-                this.product_name = this.product_types[item].product_type_name;
-            }
-        }
-    };
-    ModContentTopComponent = __decorate([
+    PageNotFoundComponent.prototype.ngOnInit = function () { };
+    PageNotFoundComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'mod_content_top',
-            templateUrl: 'mod_content_top.component.html',
-            inputs: ['product_type']
+            selector: 'page_not_found',
+            templateUrl: 'page_not_found.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], ModContentTopComponent);
-    return ModContentTopComponent;
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
 }());
-exports.ModContentTopComponent = ModContentTopComponent;
-//# sourceMappingURL=mod_content_top.component.js.map
+exports.PageNotFoundComponent = PageNotFoundComponent;
+//# sourceMappingURL=page_not_found.component.js.map

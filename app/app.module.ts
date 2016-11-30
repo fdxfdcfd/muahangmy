@@ -21,6 +21,7 @@ import {
 import { HomeComponent } from './pages/home.component/home.component';
 import { ProductDetailComponent } from './pages/product_detail.component/product_detail.component';
 import { PageNotFoundComponent } from './pages/page_not_found.component/page_not_found.component';
+import { AboutComponent } from './pages/about.component/about.component';
 //widgets
 import { WidHeaderComponent } from './widgets/wid_header.component/wid_header.component';
 import { WidFooterComponent } from './widgets/wid_footer.component/wid_footer.component';
@@ -59,7 +60,8 @@ import { CategoryService } from './services/service_category/service_category';
     ModGroupProductComponent,
     ModDetailProductComponent,
     ModCategoryProductComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AboutComponent
     ],
     providers: [
       ProductService,

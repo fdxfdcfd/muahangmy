@@ -9,26 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var core_2 = require('@angular/core');
-var router_1 = require('@angular/router');
-var HomeComponent = (function () {
-    function HomeComponent(_elRef, router) {
-        this._elRef = _elRef;
-        this.router = router;
+var AboutComponent = (function () {
+    function AboutComponent() {
     }
-    HomeComponent.prototype.ngOnInit = function () {
-        document.body.scrollTop = 0;
-        jQuery(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });
-    };
-    HomeComponent = __decorate([
+    AboutComponent.prototype.ngOnInit = function () { };
+    AboutComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'home',
-            templateUrl: 'home.component.html',
+            selector: 'about',
+            templateUrl: 'about.component.html'
         }), 
-        __metadata('design:paramtypes', [core_2.ElementRef, router_1.Router])
-    ], HomeComponent);
-    return HomeComponent;
+        __metadata('design:paramtypes', [])
+    ], AboutComponent);
+    return AboutComponent;
 }());
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+exports.AboutComponent = AboutComponent;
+//# sourceMappingURL=about.component.js.map

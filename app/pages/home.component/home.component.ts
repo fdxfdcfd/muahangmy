@@ -13,12 +13,7 @@ declare var jQuery: any;
 export class HomeComponent implements OnInit {
     constructor(private _elRef: ElementRef, private router: Router) { }
     ngOnInit() {
-        this.router.events.subscribe((evt) => {
-            if (!(evt instanceof NavigationEnd)) {
-                return;
-            }
-            document.body.scrollTop = 0;
-        });
+        document.body.scrollTop = 0;
         jQuery(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });
     }
 }

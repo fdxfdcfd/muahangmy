@@ -2,7 +2,7 @@
     <div class="menu">
         <ul>
             <li *ngFor="let menu of menus">
-                <a (click)="goTopage(menu)">{{menu?.menu_name}}</a>
+                <a routerLink="/{{menu?.page}}" (click)="goTopage(menu)">{{menu?.menu_name}}</a>
             </li>
             <div class="clear"></div>
         </ul>

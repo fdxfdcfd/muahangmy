@@ -25,8 +25,6 @@ var ModMenuComponent = (function () {
         this.getListMenu();
     };
     ModMenuComponent.prototype.goToPage = function (menu) {
-        var link = ['/san-pham', product.id];
-        this.router.navigate(link);
     };
     ModMenuComponent = __decorate([
         core_1.Component({

@@ -31,9 +31,11 @@ var mod_header_slide_component_1 = require('./modules/mod_header_slide.component
 var mod_content_top_component_1 = require('./modules/mod_content_top.component/mod_content_top.component');
 var mod_group_product_component_1 = require('./modules/mod_group_product.component/mod_group_product.component');
 var mod_detail_product_component_1 = require('./modules/mod_detail_product.component/mod_detail_product.component');
+var mod_category_product_component_1 = require('./modules/mod_category_product.component/mod_category_product.component');
 //services
 var service_product_1 = require('./services/service_product/service_product');
 var service_menu_1 = require('./services/service_menu/service_menu');
+var service_category_1 = require('./services/service_category/service_category');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -57,11 +59,13 @@ var AppModule = (function () {
                 product_detail_component_1.ProductDetailComponent,
                 mod_content_top_component_1.ModContentTopComponent,
                 mod_group_product_component_1.ModGroupProductComponent,
-                mod_detail_product_component_1.ModDetailProductComponent
+                mod_detail_product_component_1.ModDetailProductComponent,
+                mod_category_product_component_1.ModCategoryProductComponent
             ],
             providers: [
                 service_product_1.ProductService,
-                service_menu_1.MenuService
+                service_menu_1.MenuService,
+                service_category_1.CategoryService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

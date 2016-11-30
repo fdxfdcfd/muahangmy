@@ -32,9 +32,11 @@ import { ModHeaderSlideComponent } from './modules/mod_header_slide.component/mo
 import { ModContentTopComponent } from './modules/mod_content_top.component/mod_content_top.component';
 import { ModGroupProductComponent } from './modules/mod_group_product.component/mod_group_product.component';
 import { ModDetailProductComponent } from './modules/mod_detail_product.component/mod_detail_product.component';
+import { ModCategoryProductComponent } from './modules/mod_category_product.component/mod_category_product.component';
 //services
 import { ProductService } from './services/service_product/service_product';
 import { MenuService } from './services/service_menu/service_menu';
+import { CategoryService } from './services/service_category/service_category';
 
 
 @NgModule({
@@ -56,14 +58,15 @@ import { MenuService } from './services/service_menu/service_menu';
     ProductDetailComponent,
     ModContentTopComponent,
     ModGroupProductComponent,
-    ModDetailProductComponent
-    
+    ModDetailProductComponent,
+    ModCategoryProductComponent
     // NotFoundComponent,
     // Four04Component
     ],
     providers: [
       ProductService,
-      MenuService
+      MenuService,
+      CategoryService
       ],
   bootstrap:    [ AppComponent ]
 })

@@ -5,18 +5,18 @@ include_once("database.php");
 $json = file_get_contents('php://input');
 $input = json_decode($json);
 $db = new database();
-if($input->menu_id)
+if($input->category_id)
     {
 	$lenh_sql = "SELECT *
         FROM menu
-        WHERE menu_id = $input->menu_id";
+        WHERE menu_id = $input->category_id";
 	
 	$db->setQuery($lenh_sql);
 	$data = $db->loadAllRow();
 }
 else
     {
-	$lenh_sql = "SELECT * FROM menu";
+	$lenh_sql = "SELECT * FROM cate_product";
 	$db->setQuery($lenh_sql);
 	$data = $db->loadAllRow();
 }

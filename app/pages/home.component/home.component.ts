@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { Router, NavigationEnd} from '@angular/router';
 
-declare var jQuery: any;
 
 @Component({
     moduleId: module.id,
@@ -11,9 +8,7 @@ declare var jQuery: any;
 
 })
 export class HomeComponent implements OnInit {
-    constructor(private _elRef: ElementRef, private router: Router) { }
+    constructor() { }
     ngOnInit() {
-        document.body.scrollTop = 0;
-        jQuery(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });
     }
 }

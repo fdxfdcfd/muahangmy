@@ -24,8 +24,6 @@ var ModMenuComponent = (function () {
     ModMenuComponent.prototype.ngOnInit = function () {
         this.getListMenu();
     };
-    ModMenuComponent.prototype.goToPage = function (menu) {
-    };
     ModMenuComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

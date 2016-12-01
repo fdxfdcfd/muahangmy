@@ -9,19 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var NotFoundComponent = (function () {
-    function NotFoundComponent() {
+var core_2 = require('@angular/core');
+var DeliveryComponent = (function () {
+    function DeliveryComponent(_elRef) {
+        this._elRef = _elRef;
     }
-    NotFoundComponent.prototype.ngOnInit = function () { };
-    NotFoundComponent = __decorate([
+    DeliveryComponent.prototype.ngOnInit = function () {
+        document.body.scrollTop = 0;
+        jQuery(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });
+    };
+    DeliveryComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'notfound',
-            templateUrl: 'notfound.component.html'
+            selector: 'delivery',
+            templateUrl: 'delivery.component.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], NotFoundComponent);
-    return NotFoundComponent;
+        __metadata('design:paramtypes', [core_2.ElementRef])
+    ], DeliveryComponent);
+    return DeliveryComponent;
 }());
-exports.NotFoundComponent = NotFoundComponent;
-//# sourceMappingURL=notfound.component.js.map
+exports.DeliveryComponent = DeliveryComponent;
+//# sourceMappingURL=delivery.component.js.map

@@ -14,10 +14,12 @@ var home_component_1 = require('./pages/home.component/home.component');
 var product_detail_component_1 = require('./pages/product_detail.component/product_detail.component');
 var page_not_found_component_1 = require('./pages/page_not_found.component/page_not_found.component');
 var about_component_1 = require('./pages/about.component/about.component');
+var delivery_component_1 = require('./pages/delivery.component/delivery.component');
 var routes = [
     { path: 'trang-chu', component: home_component_1.HomeComponent },
     { path: 'san-pham/:id', component: product_detail_component_1.ProductDetailComponent },
     { path: 've-chung-toi', component: about_component_1.AboutComponent },
+    { path: 'giao-hang', component: delivery_component_1.DeliveryComponent },
     { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
     { path: '404', component: page_not_found_component_1.PageNotFoundComponent },
     { path: '**', redirectTo: '404' }

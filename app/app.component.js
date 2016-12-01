@@ -9,17 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var core_2 = require('@angular/core');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(_elRef) {
+        this._elRef = _elRef;
     }
-    AppComponent.prototype.ngOnInit = function () { };
+    AppComponent.prototype.ngOnInit = function () {
+        jQuery(this._elRef.nativeElement).UItoTop({ easingType: 'easeOutQuart' });
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
             templateUrl: 'app.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [core_2.ElementRef])
     ], AppComponent);
     return AppComponent;
 }());

@@ -26,6 +26,4 @@ export class ModMenuComponent implements OnInit {
     ngOnInit() {
         this.getListMenu();
     }
-    goToPage(menu: Menu): void {
-    }
 }

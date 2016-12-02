@@ -1,11 +1,12 @@
 // core
-import { NgModule }       from '@angular/core';
+import { NgModule, enableProdMode }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { AppRoutingModule }     from './app-routing.module';
 import { HttpModule, JsonpModule } from '@angular/http';
 // app
 import { AppComponent }   from './app.component';
+enableProdMode();
 // animate
 import {
   Component,
@@ -23,6 +24,8 @@ import { ProductDetailComponent } from './pages/product_detail.component/product
 import { PageNotFoundComponent } from './pages/page_not_found.component/page_not_found.component';
 import { AboutComponent } from './pages/about.component/about.component';
 import { DeliveryComponent } from './pages/delivery.component/delivery.component';
+import { NewsComponent } from './pages/news.component/news.component';
+import { ContactComponent } from './pages/contact.component/contact.component';
 //widgets
 import { WidHeaderComponent } from './widgets/wid_header.component/wid_header.component';
 import { WidFooterComponent } from './widgets/wid_footer.component/wid_footer.component';
@@ -63,7 +66,9 @@ import { CategoryService } from './services/service_category/service_category';
     ModCategoryProductComponent,
     PageNotFoundComponent,
     AboutComponent,
-    DeliveryComponent
+    DeliveryComponent,
+    NewsComponent,
+    ContactComponent
     ],
     providers: [
       ProductService,

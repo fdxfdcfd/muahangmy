@@ -6,6 +6,10 @@ import { ProductDetailComponent } from './pages/product_detail.component/product
 import { PageNotFoundComponent } from './pages/page_not_found.component/page_not_found.component';
 import { AboutComponent} from './pages/about.component/about.component';
 import { DeliveryComponent } from './pages/delivery.component/delivery.component';
+import { NewsComponent } from './pages/news.component/news.component';
+import { ContactComponent } from './pages/contact.component/contact.component';
+
+
 
 
 const routes: Routes = [
@@ -14,6 +18,8 @@ const routes: Routes = [
   { path: 'san-pham/:id',  component: ProductDetailComponent },
   { path: 've-chung-toi',  component: AboutComponent },
   { path: 'giao-hang',  component: DeliveryComponent },
+  { path: 'tin-tuc', component: NewsComponent},
+  { path: 'lien-he', component: ContactComponent},
   { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
   {path: '404', component: PageNotFoundComponent},
   {path: '**', redirectTo: '404'}

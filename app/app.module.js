@@ -16,12 +16,15 @@ var app_routing_module_1 = require('./app-routing.module');
 var http_1 = require('@angular/http');
 // app
 var app_component_1 = require('./app.component');
+core_1.enableProdMode();
 //pages
 var home_component_1 = require('./pages/home.component/home.component');
 var product_detail_component_1 = require('./pages/product_detail.component/product_detail.component');
 var page_not_found_component_1 = require('./pages/page_not_found.component/page_not_found.component');
 var about_component_1 = require('./pages/about.component/about.component');
 var delivery_component_1 = require('./pages/delivery.component/delivery.component');
+var news_component_1 = require('./pages/news.component/news.component');
+var contact_component_1 = require('./pages/contact.component/contact.component');
 //widgets
 var wid_header_component_1 = require('./widgets/wid_header.component/wid_header.component');
 var wid_footer_component_1 = require('./widgets/wid_footer.component/wid_footer.component');
@@ -64,7 +67,9 @@ var AppModule = (function () {
                 mod_category_product_component_1.ModCategoryProductComponent,
                 page_not_found_component_1.PageNotFoundComponent,
                 about_component_1.AboutComponent,
-                delivery_component_1.DeliveryComponent
+                delivery_component_1.DeliveryComponent,
+                news_component_1.NewsComponent,
+                contact_component_1.ContactComponent
             ],
             providers: [
                 service_product_1.ProductService,

@@ -5,6 +5,7 @@ class database{
 	function Database()
 	{
 		$this->pdo = new PDO("mysql:host=localhost;dbname=muahangmy","root","");
+		// $this->pdo = new PDO("mysql:host=mysql.hostinger.vn;dbname=u337295388_hugo","u337295388_hugo","thyThy313");
 		$this->pdo->query("SET NAMES utf8");
 		$this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}

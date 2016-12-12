@@ -26,6 +26,7 @@ import { AboutComponent } from './pages/about.component/about.component';
 import { DeliveryComponent } from './pages/delivery.component/delivery.component';
 import { NewsComponent } from './pages/news.component/news.component';
 import { ContactComponent } from './pages/contact.component/contact.component';
+import { ProductGridComponent } from './pages/product_grid.component/product_grid.component';
 //widgets
 import { WidHeaderComponent } from './widgets/wid_header.component/wid_header.component';
 import { WidFooterComponent } from './widgets/wid_footer.component/wid_footer.component';
@@ -68,7 +69,8 @@ import { CategoryService } from './services/service_category/service_category';
     AboutComponent,
     DeliveryComponent,
     NewsComponent,
-    ContactComponent
+    ContactComponent,
+    ProductGridComponent
     ],
     providers: [
       ProductService,

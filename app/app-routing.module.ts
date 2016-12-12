@@ -8,6 +8,7 @@ import { AboutComponent} from './pages/about.component/about.component';
 import { DeliveryComponent } from './pages/delivery.component/delivery.component';
 import { NewsComponent } from './pages/news.component/news.component';
 import { ContactComponent } from './pages/contact.component/contact.component';
+import { ProductGridComponent } from './pages/product_grid.component/product_grid.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'giao-hang',  component: DeliveryComponent },
   { path: 'tin-tuc', component: NewsComponent},
   { path: 'lien-he', component: ContactComponent},
+  { path: 'san-pham-moi', component: ProductGridComponent, data:{product_type: 1}},
   { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
   {path: '404', component: PageNotFoundComponent},
   {path: '**', redirectTo: '404'}

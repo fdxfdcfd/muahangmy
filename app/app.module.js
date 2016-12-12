@@ -25,6 +25,7 @@ var about_component_1 = require('./pages/about.component/about.component');
 var delivery_component_1 = require('./pages/delivery.component/delivery.component');
 var news_component_1 = require('./pages/news.component/news.component');
 var contact_component_1 = require('./pages/contact.component/contact.component');
+var product_grid_component_1 = require('./pages/product_grid.component/product_grid.component');
 //widgets
 var wid_header_component_1 = require('./widgets/wid_header.component/wid_header.component');
 var wid_footer_component_1 = require('./widgets/wid_footer.component/wid_footer.component');
@@ -69,7 +70,8 @@ var AppModule = (function () {
                 about_component_1.AboutComponent,
                 delivery_component_1.DeliveryComponent,
                 news_component_1.NewsComponent,
-                contact_component_1.ContactComponent
+                contact_component_1.ContactComponent,
+                product_grid_component_1.ProductGridComponent
             ],
             providers: [
                 service_product_1.ProductService,

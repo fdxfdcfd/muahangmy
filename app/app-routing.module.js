@@ -17,6 +17,7 @@ var about_component_1 = require('./pages/about.component/about.component');
 var delivery_component_1 = require('./pages/delivery.component/delivery.component');
 var news_component_1 = require('./pages/news.component/news.component');
 var contact_component_1 = require('./pages/contact.component/contact.component');
+var product_grid_component_1 = require('./pages/product_grid.component/product_grid.component');
 var routes = [
     { path: 'trang-chu', component: home_component_1.HomeComponent },
     { path: 'san-pham/:id', component: product_detail_component_1.ProductDetailComponent },
@@ -24,6 +25,7 @@ var routes = [
     { path: 'giao-hang', component: delivery_component_1.DeliveryComponent },
     { path: 'tin-tuc', component: news_component_1.NewsComponent },
     { path: 'lien-he', component: contact_component_1.ContactComponent },
+    { path: 'san-pham-moi', component: product_grid_component_1.ProductGridComponent, data: { product_type: 1 } },
     { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
     { path: '404', component: page_not_found_component_1.PageNotFoundComponent },
     { path: '**', redirectTo: '404' }

@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'giao-hang',  component: DeliveryComponent },
   { path: 'tin-tuc', component: NewsComponent},
   { path: 'lien-he', component: ContactComponent},
-  { path: 'san-pham-moi', component: ProductGridComponent, data:{product_type: 1}},
+  { path: 'san-pham-moi', component: ProductGridComponent},
   { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
   {path: '404', component: PageNotFoundComponent},
   {path: '**', redirectTo: '404'}

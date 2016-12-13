@@ -25,7 +25,7 @@ var routes = [
     { path: 'giao-hang', component: delivery_component_1.DeliveryComponent },
     { path: 'tin-tuc', component: news_component_1.NewsComponent },
     { path: 'lien-he', component: contact_component_1.ContactComponent },
-    { path: 'san-pham-moi', component: product_grid_component_1.ProductGridComponent, data: { product_type: 1 } },
+    { path: 'san-pham-moi', component: product_grid_component_1.ProductGridComponent },
     { path: '', redirectTo: 'trang-chu', pathMatch: 'full' },
     { path: '404', component: page_not_found_component_1.PageNotFoundComponent },
     { path: '**', redirectTo: '404' }

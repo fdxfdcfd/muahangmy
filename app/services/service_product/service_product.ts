@@ -23,6 +23,11 @@ export class ProductService {
         let option = new RequestOptions({ method: "post" });
         return this.http.post(this.url_api, body, option).map(res => res.json());
     }
+    getProductByProductTypeLimit(product_type){
+        let body = JSON.stringify({ "product_type_limit": product_type });
+        let option = new RequestOptions({ method: "post" });
+        return this.http.post(this.url_api, body, option).map(res => res.json());
+    }
     getProductByProductType(product_type){
         let body = JSON.stringify({ "product_type": product_type });
         let option = new RequestOptions({ method: "post" });

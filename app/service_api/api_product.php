@@ -19,7 +19,15 @@ else if($input->product_type){
 	$lenh_sql = "SELECT *
         FROM product
         WHERE product_type = $input->product_type";
-	
+	$db->setQuery($lenh_sql);
+	$data = $db->loadAllRow();
+}
+else if($input->product_type_limit){
+	$lenh_sql = "SELECT *
+        FROM product
+        WHERE product_type = $input->product_type_limit
+        LIMIT 0,4
+        ";
 	$db->setQuery($lenh_sql);
 	$data = $db->loadAllRow();
 }

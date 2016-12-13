@@ -29,6 +29,11 @@ var ProductService = (function () {
         var option = new http_2.RequestOptions({ method: "post" });
         return this.http.post(this.url_api, body, option).map(function (res) { return res.json(); });
     };
+    ProductService.prototype.getProductByProductTypeLimit = function (product_type) {
+        var body = JSON.stringify({ "product_type_limit": product_type });
+        var option = new http_2.RequestOptions({ method: "post" });
+        return this.http.post(this.url_api, body, option).map(function (res) { return res.json(); });
+    };
     ProductService.prototype.getProductByProductType = function (product_type) {
         var body = JSON.stringify({ "product_type": product_type });
         var option = new http_2.RequestOptions({ method: "post" });

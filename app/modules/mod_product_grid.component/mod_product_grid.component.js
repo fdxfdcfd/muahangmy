@@ -13,34 +13,34 @@ var service_product_1 = require('../../services/service_product/service_product'
 var router_1 = require('@angular/router');
 require('rxjs/add/operator/map');
 require('rxjs/Rx');
-var ModGroupProductComponent = (function () {
-    function ModGroupProductComponent(service_product, router) {
+var ModProductGridComponent = (function () {
+    function ModProductGridComponent(service_product, router) {
         this.service_product = service_product;
         this.router = router;
         this.product_type = 2;
     }
-    ModGroupProductComponent.prototype.getProductByProductTypeLimit = function (product_type) {
+    ModProductGridComponent.prototype.getProductByProductType = function (product_type) {
         var _this = this;
-        this.service_product.getProductByProductTypeLimit(product_type)
+        this.service_product.getProductByProductType(product_type)
             .subscribe(function (data) { return _this.products = data; }, function (error) { return console.log("Lỗi xảy ra ở HTTP service"); });
     };
-    ModGroupProductComponent.prototype.ngOnInit = function () {
-        this.getProductByProductTypeLimit(this.product_type);
+    ModProductGridComponent.prototype.ngOnInit = function () {
+        this.getProductByProductType(this.product_type);
     };
-    ModGroupProductComponent.prototype.gotoDetail = function (product) {
+    ModProductGridComponent.prototype.gotoDetail = function (product) {
         var link = ['/san-pham', product.id];
         this.router.navigate(link);
     };
-    ModGroupProductComponent = __decorate([
+    ModProductGridComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'mod_group_product',
-            templateUrl: 'mod_group_product.component.html',
+            selector: 'mod_product_grid',
+            templateUrl: 'mod_product_grid.component.html',
             inputs: ['product_type']
         }), 
         __metadata('design:paramtypes', [service_product_1.ProductService, router_1.Router])
-    ], ModGroupProductComponent);
-    return ModGroupProductComponent;
+    ], ModProductGridComponent);
+    return ModProductGridComponent;
 }());
-exports.ModGroupProductComponent = ModGroupProductComponent;
-//# sourceMappingURL=mod_group_product.component.js.map
+exports.ModProductGridComponent = ModProductGridComponent;
+//# sourceMappingURL=mod_product_grid.component.js.map

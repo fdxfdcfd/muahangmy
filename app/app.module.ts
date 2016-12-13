@@ -38,6 +38,7 @@ import { ModContentTopComponent } from './modules/mod_content_top.component/mod_
 import { ModGroupProductComponent } from './modules/mod_group_product.component/mod_group_product.component';
 import { ModDetailProductComponent } from './modules/mod_detail_product.component/mod_detail_product.component';
 import { ModCategoryProductComponent } from './modules/mod_category_product.component/mod_category_product.component';
+import { ModProductGridComponent } from './modules/mod_product_grid.component/mod_product_grid.component';
 //services
 import { ProductService } from './services/service_product/service_product';
 import { MenuService } from './services/service_menu/service_menu';
@@ -70,7 +71,8 @@ import { CategoryService } from './services/service_category/service_category';
     DeliveryComponent,
     NewsComponent,
     ContactComponent,
-    ProductGridComponent
+    ProductGridComponent,
+    ModProductGridComponent
     ],
     providers: [
       ProductService,

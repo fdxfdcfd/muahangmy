@@ -37,6 +37,7 @@ var mod_content_top_component_1 = require('./modules/mod_content_top.component/m
 var mod_group_product_component_1 = require('./modules/mod_group_product.component/mod_group_product.component');
 var mod_detail_product_component_1 = require('./modules/mod_detail_product.component/mod_detail_product.component');
 var mod_category_product_component_1 = require('./modules/mod_category_product.component/mod_category_product.component');
+var mod_product_grid_component_1 = require('./modules/mod_product_grid.component/mod_product_grid.component');
 //services
 var service_product_1 = require('./services/service_product/service_product');
 var service_menu_1 = require('./services/service_menu/service_menu');
@@ -71,7 +72,8 @@ var AppModule = (function () {
                 delivery_component_1.DeliveryComponent,
                 news_component_1.NewsComponent,
                 contact_component_1.ContactComponent,
-                product_grid_component_1.ProductGridComponent
+                product_grid_component_1.ProductGridComponent,
+                mod_product_grid_component_1.ModProductGridComponent
             ],
             providers: [
                 service_product_1.ProductService,
